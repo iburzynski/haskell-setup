@@ -1,0 +1,26 @@
+{
+// Add the following to your VS Code settings.json file inside the outer curly braces.
+// Make sure each setting ends with a comma!
+
+  // set Haskell formatter to stylish-haskell (install extension first)
+  "[haskell]": {
+    "editor.defaultFormatter": "vigoo.stylish-haskell",
+    // remove this line if you do not want to autoformat when you save
+    "editor.formatOnSave": true
+  },
+  // set font to Fira Code (install font first: https://github.com/tonsky/FiraCode/wiki/Installing)
+  "editor.fontFamily": "'Fira Code'",
+  // enable font ligatures (install Disable Ligatures extension to disable ligatures when selected)
+  "editor.fontLigatures": true,
+  // add a vertical ruler
+  "editor.rulers": [
+    {
+        "column": 100,
+        "color": "#ff9900"
+    }
+  ],
+  // enable vscode-icons (install vscode-icons extension first)
+  "workbench.iconTheme": "vscode-icons",
+  // enable Dracula theme (install Dracula Official extension first)
+  "workbench.colorTheme": "Dracula"
+}
