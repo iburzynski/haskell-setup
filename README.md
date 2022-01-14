@@ -5,7 +5,7 @@
 - Sample VS Code `settings.json` file for my complete setup
 - `.stylish-haskell.yaml` file containing stylish-haskell settings for Kowainik style guide
 - Sample `FizzBuzz.hs` file for testing GHCI and previewing theme configuration
-
+- Sample `FileAnatomy.hs` file explaining structure of a Haskell document
 
 ## 1. Install GHCup:
 
@@ -19,7 +19,7 @@
 - Press Y and ENTER to install stack
 
 - You might now see a list of system requirements. These dependencies must be installed prior to continuing installation.
-    - (Linux) Install GHCup dependencies in separate terminal window:
+    - **Debian Linux:**  Install GHCup dependencies in separate terminal window:
 
       `~$ sudo apt-get install -y build-essential curl libffi-dev libffi7 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5`
 
