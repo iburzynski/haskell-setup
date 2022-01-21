@@ -46,6 +46,7 @@
 
 
 ## 3. Install VS Code & configure for Haskell
+**Note: make sure you have completed Steps 1 and 2 before configuring VS Code for Haskell. Otherwise the VS Code extensions will install their own copy of the Haskell binaries and you will have multiple copies of Haskell installed on your system, which can cause issues.**
 
 - Download and install VS Code (https://code.visualstudio.com/Download)
 
