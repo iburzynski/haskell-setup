@@ -9,22 +9,29 @@
 
 ## 1. Install GHCup:
 
-- Open a new terminal window and enter the following command:
+- **Linux, macOS, WSL2:** Open a new terminal window and enter the following command (as a non-root user):
 
   `~$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
 
+- **Windows:** Open a new PowerShell window (as a non-admin user):
+
+  `Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true`
+
+**Note:** the following steps may be different depending on your OS:
 - Press ENTER to proceed
-- Press P or A and ENTER to prepend/append PATH variable to your `.bashrc` file
+- Press P or A and ENTER to prepend/append PATH variable
 - Press Y and ENTER to install haskell-language-server
 - Press Y and ENTER to install stack
 
 - You might now see a list of system requirements. These dependencies must be installed prior to continuing installation.
-    - **Debian Linux:**  Install GHCup dependencies in separate terminal window:
+    - **Debian Linux (i.e. Ubuntu):** Install GHCup dependencies in separate terminal window:
 
       `~$ sudo apt-get install -y build-essential curl libffi-dev libffi7 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5`
 
+    - **macOS:** Haskell installation requires Xcode as a dependency, which can be installed from the App store.
+
 - **Note:** there is a helpful 'nuke' command if you face any issues with your ghcup installation and need to start over (this may be necessary if you had any previous Haskell installation on your system and encounter errors when using stack)
-  
+
   `~$ ghcup nuke`
 
 
@@ -36,12 +43,12 @@
 
   (This will take a while, especially if you've never used Stack on your system)
 
-- **Note:** if you encounter the following warning...
+- **Linux Note:** if you encounter the following warning...
 
   `Warning: Installation path /home/{username}/.local/bin not found on the PATH environment variable.`
 
   ...add the directory to PATH with this command:
-  
+
   `~$ export PATH="$HOME/.local/bin:$PATH"`
 
 
@@ -62,13 +69,13 @@
     * `Haskell Syntax Highlighting`
     * `haskell-linter`
 
-## 4. Install stylish-haskell formatter (*recommended*) 
+## 4. Install stylish-haskell formatter (*recommended*)
 There are several Haskell formatters available that auto-format .hs files. I recommend stylish-haskell because it is popular and easy to install and integrate with VS Code.
 
 - Install stylish-haskell using stack in a terminal window:
-  
+
   `~$ stack install stylish-haskell`
-  
+
   (again, this will take a while)
 
 - Go to Extensions in VS Code and search for/install `stylish-haskell`
@@ -85,8 +92,8 @@ There are several Haskell formatters available that auto-format .hs files. I rec
 
 - (*Optional*) add the included `.stylish-haskell.yaml` file to your home directory:
     This contains preset configuration for stylish-haskell following Kowainik's
-    style guide 
-    
+    style guide
+
     (*Source:* https://github.com/kowainik/org/blob/main/.stylish-haskell.yaml)
 
 - **To manually run stylish-haskell format on your .hs files:**
