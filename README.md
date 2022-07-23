@@ -92,7 +92,7 @@ There are several Haskell formatters available that auto-format .hs files. I rec
 
 - **Macbook Note:** If you are using a MacBook with M1 Apple Chip stack may not work for you. In that case use 
 
-  `~$ stack install stylish-haskell`
+  `~$ cabal install stylish-haskell`
 
   You may have to install llvm (between version 9 and 13) before running this command if you have not installed during installing hlint.
 
