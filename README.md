@@ -41,7 +41,19 @@
 
   `~$ stack install hlint`
 
-  (This will take a while, especially if you've never used Stack on your system)
+    (This will take a while, especially if you've never used Stack on your system)
+
+  - **Macbook Note:** If you are using a MacBook with M1 Apple Chip stack may not work for you. In that case use 
+
+  `~$ cabal install hlint`
+
+  You may have to install llvm (between version 9 and 13) before running this command.
+
+  `~$ brew install llvm@12`
+
+  You also need to export the path to llvm also
+
+  `~$ export PATH=/opt/homebrew/opt/llvm@12/bin:$PATH`
 
 - **Linux Note:** if you encounter the following warning...
 
@@ -77,6 +89,18 @@ There are several Haskell formatters available that auto-format .hs files. I rec
   `~$ stack install stylish-haskell`
 
   (again, this will take a while)
+
+- **Macbook Note:** If you are using a MacBook with M1 Apple Chip stack may not work for you. In that case use 
+
+  `~$ cabal install stylish-haskell`
+
+  You may have to install llvm (between version 9 and 13) before running this command if you have not installed during installing hlint.
+
+  `~$ brew install llvm@12`
+
+  You also need to export the path to llvm also
+
+  `~$ export PATH=/opt/homebrew/opt/llvm@12/bin:$PATH`
 
 - Go to Extensions in VS Code and search for/install `stylish-haskell`
 - Type `Ctrl + Shift + p` (Linux) or `Shift + Cmd + p` (Mac) to open command palette
